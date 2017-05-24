@@ -32,13 +32,18 @@ export class MapComponent implements OnInit {
   this.mapService.getMapData()
 		.subscribe(
 			data => {
-        debugger
-         L.geoJSON(data).addTo(this.map);
+         L.geoJSON(data, {style: this.countiestyle}).addTo(this.map);
 			},
 			error => {
         console.log(error)
 			}
 		);
+}
+
+countiestyle(feature) {
+    return {
+        weight: 0.5
+    };
 }
 
 }
