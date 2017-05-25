@@ -58,7 +58,7 @@ export class MapComponent implements OnInit {
   countiestyle(feature) {
     return {
       fillColor: feature.change > 0 ? '#ff0000' : '#008000',
-      weight: 0.5,
+      weight: 0,
       fillOpacity: 0.7
     };
   }
